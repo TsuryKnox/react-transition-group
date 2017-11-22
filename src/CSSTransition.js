@@ -187,6 +187,9 @@ class CSSTransition extends React.Component {
   }
 
   reflowAndAddClass(node, className) {
+    if (!node) {
+      return;
+    }
     // This is for to force a repaint,
     // which is necessary in order to transition styles when adding a class name.
     /* eslint-disable no-unused-expressions */
